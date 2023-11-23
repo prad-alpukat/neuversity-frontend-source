@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply font-bold text-6xl mb-3;
+  }
+  h3 {
+    @apply text-3xl mb-2;
+  }
+  a {
+    @apply underline;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply py-2 px-4 rounded-lg bg-neutral-100;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply py-2 px-4 rounded-lg;
+  }
+  .btn-primary {
+    @apply bg-primary-600 text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
