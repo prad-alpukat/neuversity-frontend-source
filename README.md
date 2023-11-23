@@ -1,2 +1,2 @@
-# neuversity-frontend-source
-source file belajar frontend Neuversity
+# Neuversity Frontend Source
+Ini adalah repository berisi source file frontend belajar.
