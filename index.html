@@ -4,135 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengenalan Javascript</title>
+    <title>Mendalami Javascript</title>
+
+    <!-- import script tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- import javascript -->
+    <script src="./main.js" defer></script>
+
 </head>
 
-<body>
-    <h1>Hello world</h1>
+<body class="container px-4 mx-auto py-10">
+    <h1 id="helloText" class="text-2xl font-bold">Hello World!</h1>
+    <h2 id="testing" class="text-xl"></h2>
 
-    <!-- JS di dalam HTML -->
-    <script>
-        // Variable
-        //const phi = 3.14
-        //let count = 0
-        //console.log("phi & count: ", phi, count)
+    <hr>
 
-        // Data Types
-        // string
-        const nama = "Neuversity"
-        console.log("nama: ", nama)
+    <main class="my-10">
+        <!-- section form -->
+        <section>
+            <form id="formMhs">
+                <div class="flex flex-col gap-2 mb-4">
+                    <label for="nama">
+                        Nama
+                    </label>
+                    <input class="border border-neutral-600 py-2 px-4 w-full" type="text" id="nama"
+                        placeholder="nama...">
+                </div>
+                <div class="flex flex-col gap-2 mb-4">
+                    <label for="prodi">Prodi</label>
+                    <input class="border border-neutral-600 py-2 px-4 w-full" type="text" id="prodi"
+                        placeholder="prodi...">
+                </div>
 
-        // number
-        const phi = 3.14
-        console.log("phi: ", phi)
+                <button class="py-2 px-4 bg-blue-500 w-full font-bold text-white hover:bg-blue-800">Submit</button>
+            </form>
+        </section>
 
-        // boolean
-        const status = false
-        console.log("status: ", status)
-
-        // array
-        const warna = ["merah", undefined, "hijau", "ungu"]
-        console.log("warna: ", warna[2])
-        const daerah = [
-            // index: 0
-            ["Yogyakarta", "Sleman"],
-            // index: 1
-            [
-                "Jakarta", // index: 0
-                ["Mantrijeron", "Kotagede"], // index: 1
-                ["Kuloningan", "KotaKecil"] // index: 2
-            ]
-        ];
-        console.log("daerah: ", daerah)
-        console.log("Kelurahan ke 2 di Jakarta: ", daerah[1][1][1])
-        console.log("kulogingan: ", daerah[1][2][0])
-
-        // object 
-        const person = {
-            nama: "Anton",
-            umur: 21,
-            status: "mahasiswa",
-            menikah: false
-        }
-        const people = {
-            pradit: {
-                age: 21,
-                status: "cuti",
-                menikah: false
-            },
-            "Luqman Umar": {
-                age: 30,
-                status: "mahasiswa",
-                menikah: false
-            },
-            namasendiri: {
-                age: 25,
-                status: "mahasiswa",
-                menikah: false
-            }
-        }
-        console.log("person: ", person.nama)
-        console.log("Umur Luqman: ", people["Luqman Umar"].age)
-        console.log("status <nama sediri>", people.namasendiri.status)
-
-        // revisi umur
-        people.pradit.age = 20;
-        console.log("Umur Pradit: ", people.pradit.age)
-
-        console.log(10 === "10")
-
-        // Conditional Statement
-        // if else
-        const selected = 'Luqman Umar'
-        if (people[selected].age > 25) {
-            console.log("Umur " + selected + " sudah tua")
-        } else {
-            console.log(`Umur ${selected} masih muda`)
-        }
-
-        const gender = 'f'
-        switch (gender) {
-            case 'm':
-                console.log("Laki-laki")
-                break;
-            case 'f':
-                console.log("Perempuan")
-                break;
-            default:
-                console.log("Tidak diketahui")
-        }
-
-        // Pengulanan for
-        for (let i = 0; i < 5; i++) {
-            console.log("Pengulanan ke " + i)
-        }
-
-        // tantangan, bikin pengulangan untuk menampilkan genap di 0-10
-        for (let i = 0; i <= 10; i++) {
-            if (i % 2 == 0) {
-                console.log("genap", i)
-            } else if (i % 2 == 1) {
-                console.log("ganjil", i)
-            }
-
-            // ternary operator
-            i % 2 == 0 ? console.log("genap", i) : console.log("ganjil", i)
-            false && console.log('test')
-
-            // and operator as conditional statement
-            //0 && 2
-            //"test" && false
-            //1 && "test"
-        }
-
-
-
-        // cara tau angka genap
-        if (20 % 2 == 0) {
-            console.log("Genap")
-        }
-
-    </script>
+        <!-- section content di isi dari javascript -->
+        <section id="content" class="mt-10 pt-10 border-t border-black">
+            data kosong...
+        </section>
+    </main>
 </body>
 
 </html>
